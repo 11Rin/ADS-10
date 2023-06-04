@@ -19,7 +19,8 @@ class Tree {
       temp->value = ch;
       root->point.push_back(temp);
       std::vector<char> remainingChars(vec);
-      remainingChars.erase(std::find(remainingChars.begin(), remainingChars.end(), ch));
+      remainingChars.erase(std::find(remainingChars.begin(), remainingChars.end(), /
+                                     ch));
       insert(temp, remainingChars);
     }
   }
@@ -34,6 +35,7 @@ class Tree {
         }
     }
 }
+
  public:
   explicit Tree(const std::vector<char>& vec) {
     root = new Node;
