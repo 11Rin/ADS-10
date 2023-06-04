@@ -5,7 +5,7 @@
 #include <vector>
 #include <algorithm>
 struct Node {
-  bool isRoot = false;
+  bool helper = false;
   char value;
   std::vector<Node*> point;
 };
@@ -37,6 +37,7 @@ class Tree {
  public:
   explicit Tree(const std::vector<char>& vec) {
     root = new Node;
+    root->helper = true;
     insert(root, vec);
     std::vector<char> curr;
     findPerms(root, curr);
