@@ -10,6 +10,6 @@ std::vector<char> getPerm(const Tree& tree, int i) {
     if (perms.size() >= i) {
       return perms[i - 1];
     } else {
-        return;
+        return {};
     }
 }
