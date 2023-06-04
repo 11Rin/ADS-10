@@ -19,13 +19,13 @@ class Tree {
       temp->value = ch;
       root->point.push_back(temp);
       std::vector<char> remainingChars(vec);
-      remainingChars.erase(std::find(remainingChars.begin(), remainingChars.end(), /
-                                     ch));
+      remainingChars.erase(std::find(remainingChars.begin(),\
+                                     remainingChars.end(),ch));
       insert(temp, remainingChars);
     }
   }
   void findPerms(Node* root, std::vector<char> vec) {
-    if (!root->isRoot)
+    if (!root->helper)
       vec.push_back(root->value);
     if (root->point.empty()) {
       perms.push_back(vec);
